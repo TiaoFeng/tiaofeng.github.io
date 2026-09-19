@@ -1,0 +1,83 @@
+# 用途：将私有仓库构建为静态站点，发布到公开仓库 TiaoFeng.github.io 的 webpage 分支，
+#       并把构建期生成的个人主页 README 同步到公开仓库 TiaoFeng/TiaoFeng。
+
+name: Build & Deploy Blog
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # UTC 20:21
+    - cron: '21 20 * * *'
+
+permissions:
+  contents: write # 写入 webpage 分支需要
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出公开站点仓库（发布目标）
+        uses: actions/checkout@v4
+
+      - name: 检出私有源码仓库（只读 Deploy Key）
+        uses: actions/checkout@v4
+        with:
+          repository: TiaoFeng/personal-blog-web
+          ref: main
+          ssh-key: ${{ secrets.DEV_REPO_DEPLOY_KEY }}
+          path: blog-source
+
+      - name: 安装 Rust 工具链
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: 缓存 cargo 构建
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: blog-source
+
+      - name: 刷新贡献热力图缓存
+        working-directory: blog-source
+        run: cargo run -- refresh-heatmap
+
+      - name: 生成静态站点
+        working-directory: blog-source
+        run: cargo run -- build
+
+      - name: 发布到 webpage 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: blog-source/webpage
+          publish_branch: webpage
+          force_orphan: true # 每次部署重写为单个 commit
+          commit_message: 'chore: 自动部署 ${{ github.run_number }}'
+
+      # 个人主页：README 由构建期按模板标记块生成（最新文章与项目表格）。
+      # 写权限 Deploy Key 存在 TiaoFeng/TiaoFeng，私钥存为本仓库 Actions secret。
+      - name: 检出个人主页仓库
+        uses: actions/checkout@v4
+        with:
+          repository: TiaoFeng/TiaoFeng
+          ref: main
+          ssh-key: ${{ secrets.PROFILE_REPO_DEPLOY_KEY }}
+          path: profile-repo
+
+      - name: 同步个人主页 README
+        run: |
+          cp blog-source/webpage/README.md profile-repo/README.md
+          cd profile-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "主页 README 无变化，跳过提交"
+          else
+            git commit -m "chore: 自动同步主页 README"
+            git push
+          fi

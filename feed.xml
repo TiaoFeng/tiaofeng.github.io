@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tiaofeng / Digital Garden</title>
+  <subtitle>一个记录代码，设计与创意的神秘花园</subtitle>
+  <link href="https://tiaofeng.github.io/"/>
+  <id>https://tiaofeng.github.io/</id>
+  <updated>2026-09-19T00:00:00Z</updated>
+  <author><name>TiaoFeng</name></author>
+  <entry>
+    <title>比快更快</title>
+    <link href="https://tiaofeng.github.io/posts/faster-than-fast.html"/>
+    <id>https://tiaofeng.github.io/posts/faster-than-fast.html</id>
+    <updated>2026-09-19T00:00:00Z</updated>
+    <summary>为何要做一个本地的词元统计工具，TA有什么优势？</summary>
+    <category term="开发日志"/>
+    <category term="Rust"/>
+    <category term="tokrs"/>
+  </entry>
+  <entry>
+    <title>与你相遇，我之荣幸</title>
+    <link href="https://tiaofeng.github.io/posts/pleasure-to-meet-you.html"/>
+    <id>https://tiaofeng.github.io/posts/pleasure-to-meet-you.html</id>
+    <updated>2026-09-18T00:00:00Z</updated>
+    <summary>相逢意气为君饮，系马高楼垂柳边。</summary>
+    <category term="随笔"/>
+  </entry>
+</feed>

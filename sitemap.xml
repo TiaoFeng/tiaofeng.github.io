@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tiaofeng.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/archive.html</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/about.html</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/posts/faster-than-fast.html</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/posts/pleasure-to-meet-you.html</loc>
+    <lastmod>2026-09-18</lastmod>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/tags/rust.html</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/tags/tokrs.html</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/tags/开发日志.html</loc>
+  </url>
+  <url>
+    <loc>https://tiaofeng.github.io/tags/随笔.html</loc>
+  </url>
+</urlset>

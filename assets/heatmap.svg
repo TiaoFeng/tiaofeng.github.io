@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180" width="500" height="180" role="img" aria-labelledby="hm-title" shape-rendering="crispEdges">
+  <title id="hm-title">TiaoFeng 近期贡献节奏</title>
+  <style>
+    @font-face { font-family: "Fusion Pixel 12px"; font-style: normal; font-weight: 400; src: url(data:font/woff2;base64,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) format("woff2"); }
+  </style>
+  <rect width="500" height="180" fill="#141b24"/>
+  <rect x="1" y="1" width="498" height="178" fill="none" stroke="#263243" stroke-width="2"/>
+  <rect x="16" y="116" width="468" height="2" fill="#263243"/>
+  <g>
+    <rect x="16" y="112" width="28" height="4" fill="#1a2330"/>
+    <rect x="56" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="96" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="136" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="136" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="176" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="176" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="176" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="216" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="216" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="216" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="216" y="68" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="216" y="56" width="28" height="12" fill="#4fae5c"/>
+    <rect x="256" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="256" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="256" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="296" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="296" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="296" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="336" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="336" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="336" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="336" y="68" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="336" y="56" width="28" height="12" fill="#4fae5c"/>
+    <rect x="336" y="44" width="28" height="12" fill="#4fae5c"/>
+    <rect x="336" y="32" width="28" height="12" fill="#7ee787"/>
+    <rect x="336" y="20" width="28" height="12" fill="#7ee787"/>
+    <rect x="376" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="376" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="376" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="376" y="68" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="376" y="56" width="28" height="12" fill="#4fae5c"/>
+    <rect x="416" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="416" y="92" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="416" y="80" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="416" y="68" width="28" height="12" fill="#2f7d3f"/>
+    <rect x="416" y="56" width="28" height="12" fill="#4fae5c"/>
+    <rect x="456" y="104" width="28" height="12" fill="#1f4d2b"/>
+    <rect x="456" y="92" width="28" height="12" fill="#f2cc60"/>
+  </g>
+  <text x="16" y="138" font-size="12" font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" fill="#91a0b3">Jul</text>
+  <text x="176" y="138" font-size="12" font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" fill="#91a0b3">Aug</text>
+  <text x="376" y="138" font-size="12" font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" fill="#91a0b3">Sep</text>
+  <text x="16" y="164" font-size="12" font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" fill="#91a0b3">Last 12 weeks · 751 contributions · streak 18 days</text>
+</svg>

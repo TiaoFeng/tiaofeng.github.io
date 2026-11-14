@@ -1,0 +1,163 @@
+<!-- 用途：TiaoFeng/TiaoFeng 个人主页 README 的像素风头图。
+     复刻站点首屏视觉：夜空网格、像素树（树冠 ###### + 树干 ||）、方块月牙、
+     闪烁星点与 >_ DEV 品牌标识；配色取自 assets/styles/tokens.css。
+     字体：以 base64 data URI 内嵌 Fusion Pixel 12px Proportional Simplified Chinese
+     的 Basic-Latin 子集（U+20-7E），与站点界面同款；GitHub 以 <img> 渲染 SVG 时
+     禁止加载外部字体，故不能引用 assets/fonts/ 下的文件，只能内嵌。
+     License: SIL OFL 1.1, Copyright (c) 2022 TakWolf
+     (https://github.com/TakWolf/fusion-pixel-font)。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 300" width="1180" height="300"
+  role="img" aria-labelledby="banner-title banner-desc" shape-rendering="crispEdges">
+  <title id="banner-title">TiaoFeng / Digital Garden</title>
+  <desc id="banner-desc">夜色像素场景：星点、方块月牙与一棵像素树，左侧为 TiaoFeng 数字花园标识。</desc>
+
+  <defs>
+    <!-- 32px 网格背景，对应站点的 bg-grid -->
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#131922" stroke-width="1"/>
+    </pattern>
+    <!-- 月牙外晕 -->
+    <radialGradient id="moon-glow">
+      <stop offset="0%" stop-color="#f4e7b5" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f4e7b5" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 内嵌像素字体：Fusion Pixel 12px Basic-Latin 子集（约 2.3KB 原始 woff2） -->
+    <style>
+      @font-face {
+        font-family: "Fusion Pixel 12px";
+        font-style: normal;
+        font-weight: 400;
+        src: url(data:font/woff2;base64,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) format("woff2");
+      }
+    </style>
+  </defs>
+
+  <!-- 夜空底板 -->
+  <rect width="1180" height="300" fill="#0c0f14"/>
+  <rect width="1180" height="300" fill="url(#grid)"/>
+
+  <!-- 星点：暖白月/琥珀/酸绿/暗灰四色，两组错拍闪烁，steps 顿挫感由 discrete 模拟 -->
+  <g>
+    <rect x="392" y="34" width="4" height="4" fill="#f4e7b5">
+      <animate attributeName="opacity" values="1;0.35;1" calcMode="discrete" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="716" y="42" width="3" height="3" fill="#7ee787" opacity="0.65">
+      <animate attributeName="opacity" values="1;0.3;1" calcMode="discrete" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1140" y="74" width="3" height="3" fill="#f4e7b5">
+      <animate attributeName="opacity" values="1;0.35;1" calcMode="discrete" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="30" width="3" height="3" fill="#f2cc60">
+      <animate attributeName="opacity" values="1;0.35;1" calcMode="discrete" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="836" y="54" width="4" height="4" fill="#f4e7b5">
+      <animate attributeName="opacity" values="1;0.35;1" calcMode="discrete" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="444" y="128" width="3" height="3" fill="#f4e7b5">
+      <animate attributeName="opacity" values="1;0.35;1" calcMode="discrete" dur="3.6s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="486" y="78" width="3" height="3" fill="#91a0b3"/>
+    <rect x="652" y="100" width="4" height="4" fill="#f4e7b5"/>
+    <rect x="784" y="132" width="3" height="3" fill="#91a0b3"/>
+    <rect x="948" y="42" width="3" height="3" fill="#f2cc60"/>
+    <rect x="1096" y="152" width="3" height="3" fill="#91a0b3"/>
+    <rect x="1148" y="186" width="3" height="3" fill="#7ee787" opacity="0.55"/>
+    <rect x="596" y="158" width="3" height="3" fill="#91a0b3"/>
+    <rect x="524" y="196" width="2" height="2" fill="#91a0b3"/>
+  </g>
+
+  <!-- 方块月牙：clip-path 同站点 .pixel-moon 的 5×8 像素网格，放大 1.6 倍 -->
+  <circle cx="1063" cy="72" r="64" fill="url(#moon-glow)">
+    <animate attributeName="opacity" values="1;0.7;1" calcMode="discrete" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <polygon fill="#f4e7b5" transform="translate(1040 32) scale(1.6)"
+    points="6,0 30,0 30,6.25 24,6.25 24,12.5 18,12.5 18,37.5 24,37.5 24,43.75 30,43.75 30,50 6,50 6,43.75 0,43.75 0,12.5 6,12.5">
+    <animate attributeName="opacity" values="1;0.85;1" calcMode="discrete" dur="8s" repeatCount="indefinite"/>
+  </polygon>
+
+  <!-- 地面：地平线与像素地块 -->
+  <rect x="560" y="210" width="580" height="2" fill="#263243"/>
+  <g fill="#1a2330">
+    <rect x="580" y="212" width="8" height="8"/>
+    <rect x="644" y="212" width="8" height="8"/>
+    <rect x="820" y="212" width="8" height="8"/>
+    <rect x="884" y="212" width="8" height="8"/>
+    <rect x="948" y="212" width="8" height="8"/>
+    <rect x="1012" y="212" width="8" height="8"/>
+    <rect x="1092" y="212" width="8" height="8"/>
+  </g>
+  <g fill="#131922">
+    <rect x="612" y="228" width="8" height="8"/>
+    <rect x="740" y="228" width="8" height="8"/>
+    <rect x="900" y="228" width="8" height="8"/>
+    <rect x="980" y="228" width="8" height="8"/>
+    <rect x="1060" y="228" width="8" height="8"/>
+  </g>
+
+  <!-- 像素树：ASCII 树冠与树干按 8px 方格复刻，轻微摇曳 -->
+  <g transform="translate(868 100)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="0 72 104;-0.3 72 104;0.3 72 104;0 72 104"
+        keyTimes="0;0.33;0.66;1" calcMode="discrete" dur="6s" repeatCount="indefinite"/>
+      <g fill="#4fae5c">
+        <rect x="40" y="0" width="48" height="8"/>
+        <rect x="32" y="8" width="80" height="8"/>
+        <rect x="24" y="16" width="96" height="8"/>
+        <rect x="16" y="24" width="112" height="8"/>
+        <rect x="8" y="32" width="128" height="8"/>
+        <rect x="8" y="40" width="128" height="8"/>
+        <rect x="16" y="48" width="112" height="8"/>
+        <rect x="24" y="56" width="96" height="8"/>
+        <rect x="40" y="64" width="64" height="8"/>
+        <rect x="56" y="72" width="32" height="8"/>
+      </g>
+      <g fill="#9be89f">
+        <rect x="40" y="0" width="8" height="8"/>
+        <rect x="32" y="8" width="8" height="8"/>
+        <rect x="16" y="24" width="8" height="8"/>
+        <rect x="8" y="32" width="8" height="8"/>
+      </g>
+      <g fill="#2f7d3f">
+        <rect x="120" y="24" width="8" height="8"/>
+        <rect x="128" y="32" width="8" height="8"/>
+        <rect x="128" y="40" width="8" height="8"/>
+        <rect x="120" y="48" width="8" height="8"/>
+        <rect x="112" y="56" width="8" height="8"/>
+        <rect x="96" y="64" width="8" height="8"/>
+        <rect x="80" y="72" width="8" height="8"/>
+      </g>
+      <g fill="#8a5a2b">
+        <rect x="56" y="80" width="16" height="8"/>
+        <rect x="56" y="88" width="16" height="8"/>
+        <rect x="56" y="96" width="16" height="8"/>
+      </g>
+      <rect x="64" y="88" width="8" height="8" fill="#5f3d1c"/>
+    </g>
+  </g>
+
+  <!-- 树下图注 -->
+  <text x="940" y="252" text-anchor="middle" font-size="12" letter-spacing="6" fill="#72918a"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">CREATE WITH INTENT</text>
+
+  <!-- 左侧文案块 -->
+  <rect x="72" y="63" width="6" height="18" fill="#7ee787">
+    <animate attributeName="opacity" values="1;0;1" calcMode="discrete" dur="1.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="92" y="81" font-size="24" letter-spacing="2" fill="#72918a"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">let _ = fear;</text>
+
+  <rect x="76" y="114" width="44" height="44" fill="#04060a"/>
+  <rect x="72" y="110" width="44" height="44" fill="#7ee787"/>
+  <text x="94" y="133" text-anchor="middle" dominant-baseline="central" font-size="24" fill="#0c0f14"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">&gt;_</text>
+  <text x="130" y="134" dominant-baseline="central" font-size="24" letter-spacing="5" fill="#dbe4ef"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">DEV</text>
+
+  <text x="72" y="208" font-size="60" letter-spacing="2" fill="#dbe4ef"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">TIAOFENG</text>
+  <text x="74" y="246" font-size="24" letter-spacing="6" fill="#7ee787"
+    font-family="'Fusion Pixel 12px', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">DIGITAL GARDEN</text>
+
+  <!-- 边框 -->
+  <rect x="1" y="1" width="1178" height="298" fill="none" stroke="#263243" stroke-width="2"/>
+</svg>

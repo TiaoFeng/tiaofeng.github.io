@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tiaofeng.github.io/sitemap.xml
